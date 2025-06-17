@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf6e3;
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #000;
+    color: white;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.brand img {
+    width: 44px;
+    margin-right: 10px;
+}
+
+.container {
+    background-color: #111;
+    color: white;
+    min-height: 70vh;
+    width: 75%;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 25px;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+.songItemContainer {
+    margin-top: 20px;
+}
+
+.songItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.songItem:hover {
+    background-color: #f0f0f0;
+}
+
+.songItem img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.songName {
+    flex: 1;
+    font-weight: 500;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myProgressBar {
+    width: 80vw;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.icons i {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.songInfo {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* When playing, add opacity via JS */
+.playing #gif {
+    opacity: 1 !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .songItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timestamp {
+        margin-top: 8px;
+    }
+}
